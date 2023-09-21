@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.cordova.DeviceSec" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <keywords></keywords>
+    <!--<repo>https://github.com/uzumakinaruto123/DeviceSec.git</repo>-->
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <name>DeviceSec</name>
+    <js-module name="DeviceSec" src="www/DeviceSec.js">
+        <clobbers target="DeviceSec" />
+    </js-module>
+    <platform name="android">
+        <!-- <framework src="src/android/badge.gradle" custom="true" type="gradleReference"/> -->
+        <framework src="com.android.support:support-v4:+" />
+        <framework src="com.scottyab:rootbeer-lib:0.1.0" />
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="DeviceSec">
+                <param name="android-package" value="com.cordova.DeviceSec.DeviceSec" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+        </config-file>
+        <source-file src="src/android/DeviceSec.java" target-dir="src/com/cordova/DeviceSec" />
+        <!-- <source-file src="src/android/GPSTracker.java" target-dir="src/com/cordova/DeviceSec" /> -->
+    </platform>
+</plugin>

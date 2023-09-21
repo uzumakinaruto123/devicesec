@@ -1,0 +1,3 @@
+# prevent accidental commits by exclude everything
+/*.log
+/*.lck
