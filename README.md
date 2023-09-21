@@ -24,11 +24,7 @@ declare var DeviceSec:any;
 
 ...
 
-DeviceSec.getCurrentLocation((res)=>{
-	console.log(res.latitude+', '+res.longitude);
-},(err)=>{
-	console.log('Error getting location', err);
-});
+
 ```
 
 
